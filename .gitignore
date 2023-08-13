@@ -2,3 +2,6 @@
 *.sqlite3
 env
 apps/__pycache__/
+apps/registro_ponto/__pycache__
+apps/empresas/__pycache__
+pps/documento/migrations/__pycache__

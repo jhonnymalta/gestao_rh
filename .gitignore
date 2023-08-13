@@ -4,6 +4,7 @@ env
 apps/__pycache__/
 apps/registro_ponto/__pycache__
 apps/empresas/__pycache__
-pps/documento/migrations/__pycache__
+apps/documento/migrations/__pycache__
+apps/funcionarios/migrations/__pycache__
 apps/funcionarios/__pycache__/
 gestao_rh/__pycache__/

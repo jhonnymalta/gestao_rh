@@ -1,13 +1,17 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
-from django.views.generic import CreateView,UpdateView
+from django.views.generic import CreateView,UpdateView,DeleteView,ListView
 from .models import Empresa
 
 
 @login_required
-def nova(request):
-    return render(request,'empresas/nova.html')
+def DeletePage(request):
+    return render(request,'empresas/delete_empresa.html')
+
+
+class EmpresaList(ListView):
+    model = Empresa
 
 
 class EmpresaCreateViewModel(CreateView):
@@ -25,3 +29,7 @@ class EmpresaEditViewModel(UpdateView):
     def form_valid(self, form):
         form.save()
         return HttpResponse('OK')
+
+class EmpresaDeleteViewModel(DeleteView):
+    model = Empresa
+    success_url = ''

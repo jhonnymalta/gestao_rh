@@ -29,7 +29,8 @@ INSTALLED_APPS = [
     'apps.departamento',
     'apps.documento',
     'apps.registro_ponto',
-    'apps.core'
+    'apps.core',
+    'bootstrapform',
 
 
 

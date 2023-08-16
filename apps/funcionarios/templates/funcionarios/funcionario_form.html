@@ -1,11 +1,12 @@
 {% extends 'base.html'%}
+{% load bootstrap %}
 
 {% block main %}
 <div>
     <h2>novo funcionário</h2>
     <form method="post">
         {% csrf_token %}
-        {{ form }}
+        {{ form | bootstrap }}
         <button type="submit" class="btn btn-primary mt-2">Salvar</button>
     </form>
 </div>

@@ -2,15 +2,30 @@
 
 {% block main %}
 <div>
-    <h2>Lista de Funcionários</h2>
-    <div>
-        <a href="{% url 'create_funcionario' %}" class="btn btn-success">Adicionar Funcionário</a>
+    <h2 class="text-center">Lista de Funcionários</h2>
+    <div class="mb-5">
+        <a href="{% url 'create_funcionario' %}" class="btn btn-success  ">Adicionar Funcionário</a>
     </div>
-    {% for funcionario in object_list %}
-    <ul>
-        <li><a href="{% url 'update_funcionario' funcionario.id %}">{{funcionario.nome}}</a>
-            <a href="{% url 'delete_funcionario' funcionario.id %}" class="btn btn-danger">x</a></li>
-    </ul>
-    {% endfor%}
+
+   <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Mat</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+   {% for funcionario in object_list %}
+    <tr>
+      <th scope="row">{{funcionario.id}}</th>
+      <td><a href="{% url 'update_funcionario' funcionario.id %}">{{funcionario.nome}}</a></td>
+      <td><a href="{% url 'delete_funcionario' funcionario.id %}" class="btn btn-danger">x</a></td>
+    </tr>
+   {% endfor%}
+  </tbody>
+
+</table>
+
 </div>
 {% endblock %}

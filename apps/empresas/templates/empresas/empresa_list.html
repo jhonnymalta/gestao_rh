@@ -2,9 +2,9 @@
 
 {% block main %}
 <div>
-    <h2 class="text-center">Departamentos</h2>
+    <h2 class="text-center">Lista de Empresas Cadastradas</h2>
     <div class="mb-5">
-        <a href="{% url 'create_departamento' %}" class="btn btn-success">Adicionar Novo Departamento</a>
+        <a href="{% url 'create_empresa' %}" class="btn btn-success">Adicionar Nova Empresa</a>
     </div>
 
    <table class="table">
@@ -16,10 +16,10 @@
     </tr>
   </thead>
   <tbody>
-   {% for departamento in object_list %}
+   {% for empresa in object_list %}
     <tr>
-      <th scope="row">{{departamento.id}}</th>
-      <td><a href="">{{departamento.nome}}</a></td>
+      <th scope="row">{{empresa.id}}</th>
+      <td><a href="">{{empresa.nome}}</a></td>
       <td><a href="" class="btn btn-danger">x</a></td>
     </tr>
    {% endfor%}

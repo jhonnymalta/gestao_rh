@@ -20,7 +20,7 @@
     <tr>
       <th scope="row">{{departamento.id}}</th>
       <td><a href="">{{departamento.nome}}</a></td>
-      <td><a href="" class="btn btn-danger">x</a></td>
+      <td><a href="{% url 'delete_departamento' departamento.id%}" class="btn btn-danger">x</a></td>
     </tr>
    {% endfor%}
   </tbody>

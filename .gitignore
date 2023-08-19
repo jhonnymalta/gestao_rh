@@ -10,3 +10,5 @@ apps/funcionarios/migrations/__pycache__
 apps/funcionarios/__pycache__/
 gestao_rh/__pycache__/
 apps/registro_ponto/__pycache__/
+gestao_rh/__pycache__
+apps/registro_ponto/migrations/__pycache__

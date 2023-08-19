@@ -9,5 +9,6 @@ urlpatterns = [
     path('departamento/',include('apps.departamento.urls')),
     path('empresa/',include('apps.empresas.urls')),
     path('funcionario/',include('apps.funcionarios.urls')),
+    path('registro-ponto/',include('apps.registro_ponto.urls')),
 
 ]

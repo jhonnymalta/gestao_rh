@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'apps.registro_ponto',
     'apps.core',
     'bootstrapform',
+    'django_celery_results'
 
 
 
@@ -114,3 +115,9 @@ LOGIN_REDIRECT_URL= 'home'
 LOGOUT_REDIRECT_URL= 'login'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CELERY_RESULT_BACKEND ='django-db'
+CELERY_BROKER_URL ='redis://localhost:4379'
+CELERY_ACCEPT_CONTENT =['application/json']
+CELERY_RESULT_SERIALIZER = 'json'
+CELERY_TASK_SERIALIZER ='JSON'

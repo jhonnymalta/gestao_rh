@@ -8,8 +8,10 @@ from  django.views.generic import View
 # Create your views here.
 
 class registrar_ponto(View):
+    def post(self,*args, **kwargs):
+        user = "jhonatan"
 
-    def post(self,pk):
-        response = json.dumps({'mensagem':'requisicao executada'})
+        response = json.dumps({'mensagem':'requisicao executada',
+                               'usuario':user})
         return  HttpResponse(response,content_type='application/json')
 

@@ -9,8 +9,8 @@ function registrar_ponto(){
      csrfmiddlewaretoken: token
     },
     success: function(result){
-        console.log("sucesso");
-        $('#msg_retorno').text('Registrado com sucesso teste')
+        console.log(result);
+        $('#msg_retorno').text(result.mensagem)
     }
     })
 }

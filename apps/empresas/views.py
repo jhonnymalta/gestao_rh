@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
+from django.urls import reverse_lazy
 from django.views.generic import CreateView,UpdateView,DeleteView,ListView
 from .models import Empresa
 
@@ -20,7 +21,7 @@ class EmpresaCreateViewModel(CreateView):
 
     def form_valid(self, form):
         form.save()
-        return  HttpResponse('OK')
+        success_url = reverse_lazy('list_empresa')
 
 class EmpresaEditViewModel(UpdateView):
     model = Empresa

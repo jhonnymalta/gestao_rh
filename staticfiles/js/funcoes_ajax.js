@@ -10,7 +10,7 @@ function registrar_ponto(){
     },
     success: function(result){
         console.log(result);
-        $('#msg_retorno').text(result.mensagem)
+        $('#msg_retorno').text(result.dataHoje)
     }
     })
 }

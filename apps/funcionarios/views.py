@@ -6,6 +6,7 @@ from django.shortcuts import render
 from .models import Funcionario
 
 
+
 class funcionarios_list(ListView):
     model = Funcionario
 
@@ -19,5 +20,6 @@ class funcionarios_delete(DeleteView):
 
 class funcionarios_create(CreateView):
     model = Funcionario
-    fields = ['nome','departamentos','empresa','user']
+    readonly_fields = ('data_contratacao',)
+    fields = ['nome','departamentos','data_contratacao','empresa','user']
     success_url = reverse_lazy('list_funcionarios')
